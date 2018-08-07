@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import reduxReset from 'redux-reset';
 import shellReducerObject from './shell_reducer_object';
 

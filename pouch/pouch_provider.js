@@ -16,11 +16,12 @@ class PouchProvider extends Component {
             store: undefined,
         };
     }
+    componentDidMount() {
+        this.createPouchDB();
+    }
     createPouchDB() {
         let dbName = this.props.id;
-        if (this.state.userId !== 0) {
-          dbName += `_${this.state.userId}`;
-        }
+        
         const pouchDB = new Pouch(dbName, { auto_compaction: true });
         window.PouchDB = pouchDB;
     
@@ -31,7 +32,7 @@ class PouchProvider extends Component {
         };
     
         const debounceSave = debounce(saveToPouch, 1000);
-    
+
         pouchDB.getState().then((doc) => {
           delete doc._id; // eslint-disable-line
           delete doc._rev; // eslint-disable-line
@@ -41,18 +42,19 @@ class PouchProvider extends Component {
         }).catch((e) => {
           if (e.status === 404) {
             const store = createStoreHelper({ experiment: this.props.reducers }, this.props.config);
-            store.dispatch(this.props.startupAction());
+            // store.dispatch(this.props.startupAction());
             store.subscribe(() => debounceSave(store), 1000);
             this.setState({ isLoading: false, store });
           }
         });
-      }
+    }
     render() {
-        return (
-            <Provider store={this.state.store}>
-                {Children.only(this.props.children)}
-            </Provider>
-        );
+        if (this.state.isLoading) {
+            return <div>{'LOADING, please wait.'}</div>;
+          }
+          return (<Provider store={this.state.store}>
+            {Children.only(this.props.children)}
+          </Provider>);
     }
 }
 
