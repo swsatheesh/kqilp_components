@@ -36,12 +36,12 @@ class PouchProvider extends Component {
         pouchDB.getState().then((doc) => {
           delete doc._id; // eslint-disable-line
           delete doc._rev; // eslint-disable-line
-          const store = createStoreHelper({ experiment: this.props.reducers }, doc);
+          const store = createStoreHelper({ assignment: this.props.reducers }, doc);
           store.subscribe(() => debounceSave(store), 1000);
           this.setState({ isLoading: false, store });
         }).catch((e) => {
           if (e.status === 404) {
-            const store = createStoreHelper({ experiment: this.props.reducers }, this.props.config);
+            const store = createStoreHelper({ assignment: this.props.reducers }, this.props.config);
             // store.dispatch(this.props.startupAction());
             store.subscribe(() => debounceSave(store), 1000);
             this.setState({ isLoading: false, store });
