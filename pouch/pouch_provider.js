@@ -6,7 +6,7 @@ import debounce from 'lodash/debounce';
 import Pouch from './pouch';
 import createStoreHelper from '../redux/create_store_helper';
 
-import Router from './router/router';
+import Router from '../router/router';
 
 
 class PouchProvider extends Component {
