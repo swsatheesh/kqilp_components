@@ -54,8 +54,8 @@ const MainMenu = () => {
         <div className={'col-md-12'}>
             {
                 Object.keys(menu).map((page) => (
-                    <div className={'col-md-3 main-menu-link'} style={{ backgroundColor: page.bgColor }}>
-                        {page.name}
+                    <div key={page} className={'col-md-3 main-menu-link'} style={{ backgroundColor: menu[page].bgColor }}>
+                        {menu[page].name}
                     </div>
                 ))
             }
