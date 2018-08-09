@@ -6,6 +6,8 @@ import debounce from 'lodash/debounce';
 import Pouch from './pouch';
 import createStoreHelper from '../redux/create_store_helper';
 
+import Router from './router/router';
+
 
 class PouchProvider extends Component {
     constructor(props) {
@@ -53,7 +55,9 @@ class PouchProvider extends Component {
             return <div>{'LOADING, please wait.'}</div>;
           }
           return (<Provider store={this.state.store}>
-            {Children.only(this.props.children)}
+            <Router>
+                {Children.only(this.props.children)}
+            </Router>
           </Provider>);
     }
 }
