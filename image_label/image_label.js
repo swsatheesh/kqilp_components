@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImageComponent from '../image_component/image_component';
 
-const ImageLabel = ({ src, children, altText, imgClass, labelClass }) => (
-  <div>
+const ImageLabel = ({ src, children, altText, imgClass, labelClass, className }) => (
+  <div className={`${className}`}>
     <ImageComponent
       className={`img-responsive ${imgClass}`}
       src={src}
@@ -16,7 +16,8 @@ const ImageLabel = ({ src, children, altText, imgClass, labelClass }) => (
 ImageLabel.defaultProps = {
   altText: '',
   imgClass: '',
-  labelClass: ''
+  labelClass: '',
+  className: ''
 };
 
 ImageLabel.propTypes = {
@@ -24,7 +25,8 @@ ImageLabel.propTypes = {
   children: PropTypes.node,
   altText: PropTypes.string,
   imgClass: PropTypes.string,
-  labelClass: PropTypes.string
+  labelClass: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default ImageLabel;

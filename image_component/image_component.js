@@ -20,7 +20,8 @@ ImageComponent.propTypes = {
   alt: PropTypes.string.isRequired
 };
 ImageComponent.defaultProps = {
-  src: defImg
+  src: defImg,
+  alt: ''
 };
 
 export default ImageComponent;

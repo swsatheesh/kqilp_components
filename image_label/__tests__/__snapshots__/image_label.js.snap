@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components <ImageLabel /> should render correctly 1`] = `
-<div>
+<div
+  className=""
+>
   <img
     alt=""
     className="img-responsive "
@@ -12,7 +14,9 @@ exports[`components <ImageLabel /> should render correctly 1`] = `
 `;
 
 exports[`components <ImageLabel /> should render correctly with label 1`] = `
-<div>
+<div
+  className=""
+>
   <img
     alt="test image"
     className="img-responsive "

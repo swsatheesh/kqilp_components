@@ -14,7 +14,7 @@ describe('components', () => {
     });
     it('should render correctly with label', () => {
       const Image = renderer.create(
-        <ImageLabel src={'test.png'} altText={'test image'} imgClass={''} labelClass={''}>MyLabel</ImageLabel>
+        <ImageLabel className={''} src={'test.png'} altText={'test image'} imgClass={''} labelClass={''}>MyLabel</ImageLabel>
       ).toJSON();
       expect(Image).toMatchSnapshot();
     });
