@@ -1,0 +1,72 @@
+
+//== Oranges
+// Used for the most important components with an interaction (i.e. feedback buttons)
+
+$orange-d4:      #af3411;
+$orange-d2:      #d64c0a; // Rollover states
+$orange:         #fb6400; // Default colour for buttons & primary interactive content
+$orange-l2:      #fa833f;
+$orange-l4:      #fba26c;
+$orange-l6:      #fcc19c;
+$orange-l8:      #fde0cd;
+
+//== Aquas
+// Secondary interaction colour, used to identify interactive UI components.
+
+$aqua-d4:        #006888;
+$aqua-d2:        #008097;
+$aqua:           #00a3c0;
+$aqua-l2:        #1ab0cc;
+$aqua-l4:        #4ec0d4;
+$aqua-l6:        #a5dfea;
+$aqua-l8:        #e9f7f9;
+
+//== Greens and Reds
+// Used primarily for feedback and should not be used in any other way for patterns with feedback mechanisms, to avoid confusion.
+
+$green:          #4fa80c; // Correct Feedback
+$green-d2:       #378500;
+$red:            #ff261f; // Incorrect Feedback
+$red-d2:         #ed0800;
+
+//== Grays
+// Used for all text/icons along with framework elements such as containers, tables and some UI components.
+
+$black:          #000000;
+$dark-gray-d1:   #4c4e50; // Primary Body Copy
+$dark-gray-d2:   #474a4a;
+$dark-gray:      #55595b;
+
+$light-gray-d1:  #7f8281; // Secondary Body Copy
+$light-gray-d2:  #6c706f;
+$light-gray:     #949797;
+$light-gray-l1:  #a7a9ab;
+$light-gray-l3:  #a7a9aa;
+$light-gray-l4:  #cccecf;
+$light-gray-l6:  #e5e6e7;
+$light-gray-l7:  #f1f2f3;
+$light-gray-l8:  #f8f8f8;
+$light-gray-l9:  #f8f8f9;
+$white:          #ffffff;
+$silver:         #d8dadb;
+
+//== Broader palette
+// Colours are used when an additional range is required, for example within custom graphs.
+
+$cerise-d2:      #af2d66;
+$cerise:         #ed4f93;
+
+$purple-d2:      #8756c1;
+$purple:         #a57ae0;
+
+$blue-d2:        #2672ba;
+$blue:           #47a8ea;
+
+$turquoise-d2:   #07826b;
+$turquoise:      #30af93;
+
+$golden-d2:      #a66900;
+$golden:         #f2a800;
+
+$yellow-d2:      #a89114;
+$yellow:         #ffdb26;

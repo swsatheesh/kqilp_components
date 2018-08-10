@@ -1,0 +1,267 @@
+$grade: '3-5';
+
+//== Common Interactive Colors ------------------------------------------------
+@import "colors";
+
+//== Reassign colors
+$gray-base:               $black;
+$gray-darker:             $dark-gray-d1;
+$gray-dark:               $dark-gray-d1;
+$gray:                    $dark-gray;
+$gray-light:              $light-gray-d1;
+$gray-lighter:            $light-gray-l4;
+
+$brand-primary:           $orange;
+$brand-success:           $green;
+$brand-info:              $aqua;
+$brand-danger:            $red;
+
+$body-bg:                 $white;
+$text-color:              $dark-gray;
+$link-color:              $aqua;
+$link-hover-color:        $aqua;
+
+
+//== Colors ---------------------------
+
+$menu-border:             $dark-gray-d1;
+$menu-background:         $dark-gray-d1;
+$box-shadow-color:        rgba(0,0,0,.26);
+
+
+//== Scaffolding ----------------------
+
+$border-radius-base: 7px;
+
+//== Typoraphy ------------------------
+$font-family-avenir-bold: "Source Sans Pro Bold", Helvetica, Arial, sans-serif;
+$font-family-vag-rounded: "Source Sans Pro Bold", Helvetica, Arial, sans-serif;
+$font-family-paragragh: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-paragragh;
+$headings-font-family: $font-family-vag-rounded;
+$headings-nav-font-family: $font-family-vag-rounded;
+$button-font-family: $font-family-vag-rounded;
+
+$navbar-font-family: "Source Sans Pro Light", Helvetica, Arial, sans-serif;
+$font-family-semi-bold: "Source Sans Pro Semi Bold", Helvetica, Arial, sans-serif;
+$modal-content-font-family: "Source Sans Pro Regular", Helvetica, Arial, sans-serif;
+
+$headings-font-family-bold: $font-family-vag-rounded;
+$disable-button-font-family: $modal-content-font-family;
+$font-size-base: 17.66px;
+
+// Font-icons
+$nc-font-name: 'nucleo-glyph';
+$font-family-icon: 'Nucleo Glyph';
+
+$experiment-top-margin: $font-size-base * 3.2;
+
+.experiment{
+  margin-top: $experiment-top-margin;
+}
+
+$line-height-base:        1.5;
+$line-height-h2:          1.25;
+$line-height-h3:          1.3;
+$line-height-h4:          1.35;
+$line-height-h9:          1.6;
+
+$line-height-computed:    floor(($font-size-base * $line-height-base));
+
+$font-size-h1:            floor($font-size-base * 2.9);
+$font-size-h2:            floor($font-size-base * 2.2);
+$font-size-h3:            floor($font-size-base * 1.7);
+//$font-size-h4:            floor($font-size-base * 1.3);
+$font-size-h4:            22.08px;
+$font-size-h5:            floor($font-size-base * 1);
+$font-size-h6:            floor($font-size-base * 0.9);
+$font-size-h7:            floor($font-size-base * 0.8);
+$font-size-h8:            floor($font-size-base * 0.7);
+$font-size-h9:            floor($font-size-base * 0.6);
+//font for mcq image label
+$font-size-mcq:            floor($font-size-base * 1.4);
+//== Navbar ---------------------------
+
+$navbar-border-radius: 0;
+$navbar-inverse-bg: $menu-background;
+$navbar-inverse-brand-color: $white;
+$navbar-icon-size: 20px;
+$navbar-icon-color: $light-gray-l3;
+$navbar-home-index: 1;
+
+// custom
+$navbar-margin-bottom: 10px;
+
+//== Navs -----------------------------
+
+$nav-tabs-border-color:                     $light-gray-l6;
+
+$nav-tabs-link-hover-border-color:          #D8DADB;
+$nav-tabs-active-link-hover-bg:             $orange;
+$nav-tabs-active-link-hover-border-color:   $orange;
+$nav-tabs-active-link-hover-color:          $white;
+
+// Custom
+$nav-tabs-border:                           5px;
+$nav-tabs-inactive-bg:                      $nav-tabs-link-hover-border-color;
+$nav-min-width:                             180px;
+
+
+// custom
+$navbar-margin-bottom: 10px;
+$navbar-font-size: 18px;
+
+// $nav-pills-border-radius;
+// $nav-pills-active-link-hover-color;
+$nav-pills-active-link-hover-bg: $white;
+//== Grid -----------------------------
+
+$grid-gutter-width: 30px;
+
+//== Button ---------------------------
+
+// Experiment: Can I translate the names of the themes.
+$btn-border-radius-base: $border-radius-base;
+
+$btn-border-radius-large: $border-radius-base;
+$btn-border-radius-small: $border-radius-base;
+
+$btn-toolbar-spacing: 15px;
+
+
+$btn-disabled-color: $white;
+$btn-disabled-background-color: $light-gray-l4;
+$btn-disabled-border-color: $light-gray-l4;
+
+// custom
+$btn-border-width: 2px;
+$btn-min-width: 120px;
+
+//== Modals ---------------------------
+$border-radius-large: 10px;
+$modal-font-size: 17.664px;
+$modal-header-font-size: 17.664px;
+$modal-line-height: 26.496px;
+$modal-image-margin: 20px 0px;
+$modal-lg: 1110px;
+$modal-border-radius: 7px;
+$modal-header-h: 60px;
+$modal-footer-h: 75px;
+
+//== States ---------------------------
+
+// These also effect panels
+$state-success-text:             $white;
+$state-success-bg:               $green;
+$state-success-border:           $green;
+
+$state-danger-text:             $white;
+$state-danger-bg:               $red;
+$state-danger-border:           $red;
+
+//== Components -----------------------
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   15px;
+
+//== Panels ---------------------------
+
+$panel-border-radius: $modal-border-radius;
+
+//== Tables ---------------------------
+
+$table-border-color: $light-gray-l4;
+$table-default-cell-padding: 5px;
+$table-default-thead-font-size: 16px;
+$table-default-tbody-font-size: 16px;
+$table-default-tbody-line-height: 20px;
+
+//== Forms ----------------------------
+
+$input-border: $aqua;
+$input-border-focus: $aqua;
+$input-border-radius: $border-radius-base;
+
+// audio icon
+
+$width-icon: 40px;
+$height-icon: 40px;
+$border-radius-icon: 8px;
+$padding-icon: 6px;
+$font-size-icon: 24px;
+
+
+//close icon font size
+$close-font-size: 24px;
+
+//table custom
+
+$table-header-color: #d5eff3;
+$table-border-color: #99dbe7;
+
+//outline button
+$outline-button-color: $orange;
+$outline-disable-color: $light-gray-d1;
+$outline-border-color: #a7a9ab;
+
+//checkbox & radio button
+
+$input-border-color: #A7A9AA;
+
+// icon
+
+$icon-font-size: $font-size-base;
+
+// print-icon
+
+$print-icon-font-size: 20px;
+$print-icon-right: 45px;
+$print-icon-top: 12px;
+
+// Model heading
+$model-heading-line-height: 26.496px;
+
+// global variables
+$navbar-brand-fontsize-desktop: 22.08px;
+$navbar-brand-fontsize-tablet: 17.664px;
+$navbar-brand-fontsize-phone: 19.2px;
+$navbar-brand-lineheight-desktop: 33.12px;
+$navbar-brand-lineheight-tablet: 33.12px;
+$navbar-brand-lineheight-phone: 28.8px;
+
+$navbar-link-fontsize-desktop: 15.486px;
+$navbar-link-fontsize-tablet: 15.486px;
+$navbar-link-fontsize-phone: 13.44px;
+$navbar-link-lineheight-desktop: 23.184px;
+$navbar-link-lineheight-tablet: 23.184px;
+$navbar-link-lineheight-phone: 20.16px;
+
+$cdlo-title-fontsize-desktop: 17.664px;
+$cdlo-title-fontsize-tablet: 17.664px;
+$cdlo-title-fontsize-phone: 15.36px;
+$cdlo-title-lineheight-desktop: 26.496px;
+$cdlo-title-lineheight-tablet: 26.496px;
+$cdlo-title-lineheight-phone: 23.04px;
+
+$cdlo-content-fontsize-desktop: 17.664px;
+$cdlo-content-fontsize-tablet: 17.664px;
+$cdlo-content-fontsize-phone: 15.36px;
+$cdlo-content-lineheight-desktop: 26.496px;
+$cdlo-content-lineheight-tablet: 26.496px;
+$cdlo-content-lineheight-phone: 23.04px;
+
+$rubric-fontsize-desktop: 17.664px;
+$rubric-fontsize-tablet: 17.664px;
+$rubric-fontsize-phone: 15.36px;
+$rubric-lineheight-desktop: 26.496px;
+$rubric-lineheight-tablet: 26.496px;
+$rubric-lineheight-phone: 23.04px;
+
+$rubric-table-bold-fontsize: 15.49px;
+$rubric-table-content-fontsize: 15.49px;
+
+$modal-title-color: $dark-gray;
+$modal-close-icon: './images/close_icon_fill.svg' !default;
+$modal-close-icon-size: 24px 24px;
+
+$dropdown-input-border-radius: 3px;

@@ -1,4 +1,6 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "main_menu";
+@import
+    "main_menu",
+    "video_player";
