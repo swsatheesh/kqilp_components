@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <ImageLabel /> should render correctly 1`] = `
+<div>
+  <img
+    alt=""
+    className="img-responsive "
+    role="presentation"
+    src="test.png"
+  />
+</div>
+`;
+
+exports[`components <ImageLabel /> should render correctly with label 1`] = `
+<div>
+  <img
+    alt="test image"
+    className="img-responsive "
+    role={null}
+    src="test.png"
+  />
+  <label
+    className="image-label "
+    htmlFor="test image"
+  >
+    MyLabel
+  </label>
+</div>
+`;

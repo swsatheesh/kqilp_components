@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <ImageComponent /> should render ImageComponent 1`] = `
+<img
+  alt=""
+  role="presentation"
+  src="default.png"
+/>
+`;
