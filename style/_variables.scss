@@ -261,7 +261,7 @@ $rubric-table-bold-fontsize: 15.49px;
 $rubric-table-content-fontsize: 15.49px;
 
 $modal-title-color: $dark-gray;
-$modal-close-icon: './images/close_icon_fill.svg' !default;
+$modal-close-icon: '#{$images-folder-path}/close_icon_fill.svg' !default;
 $modal-close-icon-size: 24px 24px;
 
 $dropdown-input-border-radius: 3px;

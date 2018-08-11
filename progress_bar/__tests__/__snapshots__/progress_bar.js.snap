@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <ProgressBar /> should render correctly 1`] = `
+<div
+  className="progress "
+>
+  <div
+    className="progress-bar  "
+    max={100}
+    min={0}
+    now={10}
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      10%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components <ProgressBar /> should render correctly with active stripes 1`] = `
+<div
+  className="progress "
+>
+  <div
+    className="progress-bar progress-bar-striped active"
+    max={100}
+    min={0}
+    now={10}
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Progress Level
+    </span>
+  </div>
+</div>
+`;

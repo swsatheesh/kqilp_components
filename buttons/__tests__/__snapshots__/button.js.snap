@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <Button /> should have a large size 1`] = `
+<button
+  className="btn btn-solid btn-lg init-caps"
+  disabled={false}
+  onClick={undefined}
+>
+  click me large
+</button>
+`;
+
+exports[`component <Button /> should have a small size 1`] = `
+<button
+  className="btn btn-solid btn-sm init-caps"
+  disabled={false}
+  onClick={undefined}
+>
+  click me small
+</button>
+`;
+
+exports[`component <Button /> should have disabled 1`] = `
+<button
+  className="btn btn-outline init-caps"
+  disabled={true}
+  onClick={undefined}
+>
+  click me small
+</button>
+`;
+
+exports[`component <Button /> should render correctly 1`] = `
+<button
+  className="btn btn-outline init-caps"
+  disabled={false}
+  onClick={[Function]}
+>
+  click me
+</button>
+`;

@@ -1,0 +1,357 @@
+
+@mixin button-variant(
+    $color,
+    $background,
+    $border,
+    $border-color,
+    $border-width: $btn-border-width,
+    $shadow-color: $box-shadow-color,
+    $border-radius: $btn-border-radius-base,
+    $font: $button-font-family,
+    $min-width: 120px
+  ) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  border-width: $border-width;
+  min-width: $min-width;
+  border-radius: $border-radius;
+  font-family: $font;
+  &:focus,
+  &.focus {
+    outline: 0;
+    color: $color;
+    border-color: $border-color;
+  }
+  &:hover {
+    color: $color;
+    box-shadow: 0 2px 3px 1px $shadow-color;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      border-color: $border-color;
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(1);
+    @include box-shadow(none);
+    color: $outline-disable-color;
+    background-color: $white;
+    border-color: $outline-border-color;
+    font-family: $disable-button-font-family;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $outline-disable-color;
+      background-color: $white;
+      border-color: $outline-border-color;
+      font-family: $disable-button-font-family;
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+//mixin for button having image & label
+@mixin button-image-variant(
+    $color,
+    $background,
+    $border,
+    $border-color,
+    $border-width: $btn-border-width,
+    $border-radius: $btn-border-radius-base,
+    $font: $headings-font-family,
+    $min-width: 120px
+  ) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  border-width: 2px;
+  min-width: $min-width;
+  border-radius: $btn-border-radius-base;
+  font-family: $font;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  &:focus,
+  &.focus {
+    outline: 0;
+    color: $color;
+    border-color: $border-color;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      border-color: $border-color;
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(1);
+    @include box-shadow(none);
+    color: $light-gray-d1;
+    background-color: $white;
+    border-color: $light-gray-l4;
+    opacity: 0.5;
+    .btn-image-label{
+      color: $white;
+    }
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $light-gray-d1;
+      background-color: $white;
+      border-color: $light-gray-l4;
+      opacity: 0.5;
+      .btn-image-label{
+        color: $white;
+      }
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+  img{
+    // border-radius: $border-radius-base;
+  }
+  .btn-image-label{
+    display: block;
+    margin: 0 auto;
+    color: $white;
+    background-color: $orange;
+    padding: 6px 0px;
+    font-family: $font-family-vag-rounded;
+    // &:focus{
+    //   background-color: $aqua;
+    // }
+  }
+
+  .mcq-default-label{
+    display: inline-block;
+    color: #ffffff;
+    background-color: #fb6400;
+    background-color: transparent;
+    padding: 0px 10px 0px 12px;
+    vertical-align: middle;
+    font-size: $font-size-mcq;
+    cursor: pointer;
+  }
+
+  .btn-image-number{
+    @extend .btn-image-label;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 15px;
+    border-bottom-left-radius: $border-radius-base;
+    line-height: 1;
+  }
+
+  .btn-image-label.disabled,
+  .btn-image-label[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(1);
+    @include box-shadow(none);
+    color: $white;
+    background-color: $light-gray-l4;
+    border-color: $light-gray-l4;
+  }
+  .btn-image-label.disabled,
+  .btn-image-label[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $white;
+      background-color: $light-gray-l4;
+      border-color: $light-gray-l4;
+    }
+  }
+}
+
+$font-family-icon: 'Nucleo Glyph' !default;
+$fa-var-check: "\e670";
+$font-size: 22px;
+
+@mixin button-icon-variant(
+    $parent,
+    $color,
+    $icon
+  ) {
+    @include button-variant($dark-gray-d1, $white, $green, $orange, $btn-border-width);
+    &::after{
+      content: $icon;
+      font-family: $font-family-icon;
+      font-size: $font-size;
+      color: $color;
+    }
+    //border-color: $color;
+    font-weight: bold;
+  }
+
+  @mixin button-close-variant(
+      $parent,
+      $icon
+    ) {
+      &::after{
+        content: $icon;
+        font-family: $font-family-icon;
+        font-size: 12px;
+        color: $light-gray;
+        font-weight: bold;
+        border: 2px solid $light-gray;
+        padding: 4px;
+        border-radius: 100%;
+      }
+      border: 1px solid transparent;
+      background-color: transparent;
+      padding: 0;
+      float: right;
+      margin: -3px 0px 0px 4px;
+    }
+
+    @mixin mcq-feedback {
+        font-family: $font-family-icon;
+        position: absolute;
+        bottom: 11px;
+        left: 12px;
+        font-size: $font-size;
+        color: $white;
+        font-weight: bold;
+    }
+
+    @mixin audio-icon-variant{
+        &::before{
+          font-family: $font-family-icon;
+          font-size: $icon-font-size;
+          color: $light-gray-l7;
+        }
+        // width: $width-icon;
+        // height: $height-icon;
+        border: 0;
+        background-color: #474a4a;
+        border-radius: $border-radius-icon;
+        outline: none;
+        margin-bottom: 10px;
+        padding: $padding-icon;
+        border: 3px solid transparent;
+    }
+
+    @mixin sp-tool-icon-variant{
+        &::before{
+          font-family: $font-family-icon;
+          font-size: $icon-font-size;
+          color: $light-gray-l7;
+        }
+        // width: $width-icon;
+        // height: $height-icon;
+        border: 0;
+        background-color: #474a4a;
+        border-radius: $btn-border-radius-base;
+        outline: none;
+        margin-bottom: 10px;
+        padding: $padding-icon;
+        border: 3px solid transparent;
+    }
+
+    @mixin callout-connector-line(
+      $side,
+      $left,
+      $width-connector-line,
+      $height-connector-line
+    ){
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border: 2px solid $white;
+          border-#{$side}: none;
+        }
+        position: relative;
+        width: $width-connector-line;
+        height: $height-connector-line;
+        background-color: $aqua;
+        vertical-align: middle;
+        left: $left;
+    }
+
+    @mixin callout-connector-circle(
+      $left
+    ){
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border-radius: 100%;
+          border: 2px solid $aqua;
+        }
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border-radius: 100%;
+          border: 4px solid $white;
+        }
+        background-color: transparent;
+        position: relative;
+        border-radius: 100%;
+        border: 2px solid $white;
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        left: $left;
+    }

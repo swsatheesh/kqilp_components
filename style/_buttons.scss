@@ -1,0 +1,311 @@
+// Override the button-variant mixin.
+.btn-solid {
+  // @extend .hvr-radial-out;
+  @include button-variant($white, $orange, $orange, $orange-d2, $btn-border-width, $box-shadow-color);
+  @include radial-effect($orange-d2, 0.5s, 30px);
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(1);
+    @include box-shadow(none);
+    color: $btn-disabled-color;
+    background-color: $btn-disabled-background-color;
+    border-color: $btn-disabled-border-color;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-disabled-color;
+      background-color: $btn-disabled-background-color;
+      border-color: $btn-disabled-border-color;
+    }
+  }
+}
+
+.btn-outline {
+  // @extend .hvr-radial-out;
+  @include button-variant($outline-button-color, $white, $orange, $orange-d2, $btn-border-width, $box-shadow-color);
+  @include radial-effect($orange-d2, 0.5s, 30px);
+}
+
+.btn-gray {
+  // @extend .hvr-radial-out;
+  @include button-variant($dark-gray-d1, $white, $light-gray-l6, $light-gray-l6, $btn-border-width, $box-shadow-color);
+}
+
+.btn-image {
+  @include button-image-variant($dark-gray-d1, $white, $orange, $orange, $btn-border-width);
+}
+
+.btn-image-active{
+  @include button-image-variant($dark-gray-d1, $white, $aqua, $aqua, $btn-border-width);
+  .btn-image-label, .btn-image-number{
+    background-color: $aqua;
+  }
+}
+
+.btn-correct {
+  @include button-icon-variant('.btn-correct-anwser', $green, '\e66e');
+  &:hover {
+    box-shadow: none;
+    border-color: $green;
+  }
+  &:focus,
+  &:active:focus,
+  &:active:hover{
+    border-color: $green;
+  }
+}
+
+.btn-incorrect {
+  @include button-icon-variant('.btn-incorrect-anwser', $red, '\e661');
+  &:hover {
+    box-shadow: none;
+    border-color: $red;
+  }
+}
+
+.btn-round-correct{
+  @include button-icon-variant('.btn-correct-anwser', $white, '\e672');
+  border-radius: 50%;
+  padding: 2px 8px;
+  min-width: 0px;
+  background-color: $green;
+  border-width: 0px;
+  &:hover {
+    box-shadow: none;
+  }
+  &:focus,
+  &:active:focus,
+  &:active:hover{
+    border-color: $green;
+  }
+}
+
+.btn-round-incorrect{
+  @include button-icon-variant('.btn-incorrect-anwser', $white, '\e6ad');
+  border-radius: 50%;
+  padding: 2px 8px;
+  min-width: 0px;
+  background-color: $red;
+  border-color: $red;
+  border-width: 0px;
+  &:hover {
+    box-shadow: none;
+  }
+  &:focus,
+  &:active:focus,
+  &:active:hover{
+    border-color: $red;
+  }
+}
+
+.icon-button{
+    border: 1px solid transparent;
+    background-color: transparent;
+    // float: right;
+    font-size: $icon-font-size;
+    padding-right: 10px;
+}
+
+.mcq-default {
+  @include button-image-variant($dark-gray-d1, $orange, $orange, $orange, $btn-border-width);
+  padding: 2px;
+  .mcq-feedback{
+    display: none;
+  }
+  &:focus,
+  &:active:focus,
+  &:active:hover{
+    border-color: transparent;
+  }
+  img{
+    border-radius: $btn-border-radius-base;
+  }
+}
+
+.mcq-correct{
+  background-color: $green;
+  border: 2px solid $green;
+  .mcq-feedback{
+    display: block;
+    @include mcq-feedback;
+  }
+}
+
+.mcq-incorrect{
+  background-color: $red;
+  border: 2px solid $red;
+  .mcq-feedback{
+    display: block;
+    @include mcq-feedback;
+  }
+}
+
+.image-label-container{
+  img{
+    width: 100%;
+  }
+  .image-label{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.button-border-color{
+  border-color: $orange;
+}
+
+.audioIcon{
+  @include audio-icon-variant;
+}
+
+.btn-callout-wrapper{
+  display: inline-block;
+  // background-color: #cfcfcf;
+  .btn-callout{
+    @include button-variant($dark-gray-d1, $white, $white, $white, 2px, $box-shadow-color);
+    position: relative;
+    &:hover{
+      box-shadow: none;
+    }
+  }
+  .btn-callout:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: $btn-border-radius-base;
+    border: 2px solid $aqua;
+  }
+  .connector-line-left{
+    display: inline-block;
+    @include callout-connector-line(left, 6px, 40px, 6px);
+  }
+  .connector-circle-left{
+    display: inline-block;
+    @include callout-connector-circle(11px);
+  }
+
+  .connector-line-right{
+    display: inline-block;
+    z-index: 1;
+    @include callout-connector-line(right, -5px, 40px, 6px);
+  }
+  .connector-circle-right{
+    display: inline-block;
+    @include callout-connector-circle(-11px);
+  }
+
+  .connector-line-top{
+    margin: 0 auto;
+    top: 2px;
+    @include callout-connector-line(top, 0px, 6px, 40px);
+  }
+  .connector-circle-top{
+    margin: 0 auto;
+    top: 4px;
+    @include callout-connector-circle(0px);
+  }
+
+  .connector-line-bottom{
+    margin: 0 auto;
+    top: -2px;
+    z-index: 1;
+    @include callout-connector-line(bottom, 0px, 6px, 40px);
+  }
+  .connector-circle-bottom{
+    margin: 0 auto;
+    top: -4px;
+    @include callout-connector-circle(0px);
+  }
+}
+
+.close-button{
+  border: none;
+  background-color: transparent;
+  float: right;
+  font-size: $close-font-size;
+  padding: 2px;
+  outline: none;
+  color: transparent;
+  background-image: url($modal-close-icon);
+  background-size: $modal-close-icon-size;
+  background-repeat: no-repeat;
+  background-position: 2px 20px;
+}
+
+/* label conventions */
+.init-caps {
+  text-transform: capitalize;
+}
+.lower-case {
+  text-transform: lowercase;
+}
+.upper-case {
+  text-transform: uppercase;
+}
+.no-transform {
+  text-transform: none;
+}
+
+/* side pannel */
+.sp-btn-tool-icon {
+  @include sp-tool-icon-variant;
+}
+
+/* Print report */
+.pr-btn-close {
+  position: relative;
+  top     : 0.1em;
+  padding : .4em .4em 0 0;
+}
+
+.audio-btn {
+   height: $height-icon;
+   width: $width-icon;
+   padding: 0;
+   box-sizing: border-box;
+   color: $light-gray-l9;
+   background: $dark-gray-d1;
+   border: 1px solid transparent;
+   span{
+     display: block;
+     line-height: $width-icon;
+     font-size: $font-size-icon;
+   }
+   &:hover {
+     border: 1px solid transparent;
+   }
+   &:focus {
+     outline: 0;
+     color: $light-gray-l9;
+     background: $dark-gray-d1;
+     &:hover {
+       color: #333;
+       background: #e6e6e6;
+     }
+   }
+ }
+ .icon-button.icon-deletion-table-report {
+     position: absolute;
+     top: -12px;
+     left: -10px;
+     border-radius: 50%;
+     overflow: hidden;
+     color: $orange;
+     overflow: hidden;
+     line-height: 1;
+     text-align: center;
+     padding: 1px;
+     font-size: 1.5em;
+     border-color: transparent;
+    background-color: $white;
+ }

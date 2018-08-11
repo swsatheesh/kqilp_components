@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <Toolbar /> should render 1`] = `
+<div
+  className="btn-toolbar"
+>
+  <button
+    className="btn btn-outline init-caps"
+    disabled={false}
+    onClick={undefined}
+  >
+    Click Me!
+  </button>
+  <button
+    className="btn btn-outline init-caps"
+    disabled={false}
+    onClick={undefined}
+  >
+    Click Me!
+  </button>
+</div>
+`;

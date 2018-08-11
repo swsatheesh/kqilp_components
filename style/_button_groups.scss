@@ -1,0 +1,20 @@
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  margin-left: -$btn-toolbar-spacing; // Offset the first child's margin
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: $btn-toolbar-spacing;
+  }
+  > .btn.icon-button{
+    margin-left: 0;
+  }
+}
+
+.btn-toolbar.float-right{
+  > .btn,
+  > span,
+  {
+    float: right
+  }
+}

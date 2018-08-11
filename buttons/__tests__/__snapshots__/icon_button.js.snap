@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component <IconButton /> should render correctly 1`] = `
+<button
+  className="btn icon-button"
+  disabled={false}
+  onClick={undefined}
+>
+  <span
+    className="fa fa-home"
+  />
+  
+</button>
+`;

@@ -2,5 +2,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import
+    "mixins",
     "main_menu",
-    "video_player";
+    "video_player",
+    "buttons",
+    "button_groups",
+    "helpers",
+    "progress_bar";
